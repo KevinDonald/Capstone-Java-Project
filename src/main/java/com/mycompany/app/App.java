@@ -18,20 +18,30 @@ public class App
 {
     public static void main( String[] args )
     {
+	String[] letters = splitByComma(readInLetters(args[0]));
+
+	for (int i = 0; i < letters.length; ++i)
+	{
+		System.out.println(letters[i]);
+	}
+    }
+
+    public static String readInLetters(String fileName)
+    {
 	try
 	{
-		String csvLetters = Files.readString(Paths.get(args[0]), StandardCharsets.UTF_8);
-		String[] items = csvLetters.split(",");
-
-		for (int i = 0; i < items.length; ++i)
-		{
-			System.out.println(items[i]);
-		}
+		return Files.readString(Paths.get(fileName), StandardCharsets.UTF_8);
 	}
 	catch (IOException e)
 	{
 		System.out.println("Please specify file path in args: e.g., java App.java \"nameOfFile.txt\".");
 		System.out.println(e);
 	}
+	return null;
+    }
+
+    public static String[] splitByComma(String input)
+    {
+	return input.split(",");
     }
 }
