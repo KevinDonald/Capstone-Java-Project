@@ -6,12 +6,12 @@ import java.io.IOException;
 
 /*
  * Used https://stackoverflow.com/questions/326390/how-do-i-create-a-java-string-from-the-contents-of-a-file 
- * code for reading in String easily
+ * code for reading in String easily (copied and modified)
  *
  * https://stackoverflow.com/questions/26268132/all-inclusive-charset-to-avoid-java-nio-charset-malformedinputexception-input
  * for error checking
  *
- * And a lot of Javadocs and one quick search on array length
+ * And a lot of Javadocs and one quick search on array length syntax (length versus length())
 */
 
 public class App 
@@ -30,6 +30,7 @@ public class App
     {
 	try
 	{
+		// The below line is from StackOverflow, copied and modified
 		return Files.readString(Paths.get(fileName), StandardCharsets.UTF_8);
 	}
 	catch (IOException e)
