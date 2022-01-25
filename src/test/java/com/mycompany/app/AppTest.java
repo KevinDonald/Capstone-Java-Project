@@ -18,4 +18,11 @@ public class AppTest
 		String wordsCSV = "Bob,Mary,Sue,Jim";
 		assertEquals(words, App.splitByComma(wordsCSV));
 	}
+	
+	public void testSplitInEs()
+	{
+		String textImport = readInLetters(SpanishLetters.txt);
+		String[] esWords = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o","p","q","r","s","t","u","v","w","x","y","z"};
+		assertEquals(esWords, App.splitByComma(textImport));
+	}
 }
