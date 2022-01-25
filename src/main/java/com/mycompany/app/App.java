@@ -11,6 +11,9 @@ import java.io.IOException;
  * https://stackoverflow.com/questions/26268132/all-inclusive-charset-to-avoid-java-nio-charset-malformedinputexception-input
  * for error checking
  *
+ * https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+ * for pom file
+ *
  * And a lot of Javadocs and one quick search on array length syntax (length versus length())
 */
 
