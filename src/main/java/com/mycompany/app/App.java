@@ -34,7 +34,7 @@ public class App
 	try
 	{
 		// The below line is from StackOverflow, copied and modified
-		return Files.readString(Paths.get(fileName), StandardCharsets.UTF_8);
+		return Files.readString(Paths.get(fileName), StandardCharsets.UTF_8).trim();
 	}
 	catch (IOException e)
 	{
