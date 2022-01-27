@@ -1,7 +1,7 @@
 # Capstone-Java-Project
 
 English Letter Output
-<img width="1440" alt="Screen Shot 2022-01-25 at 3 48 11 PM" src="https://user-images.githubusercontent.com/47227896/151110095-2389f317-b79b-4cea-bcc1-c02e876d5f3a.png">
+<img width="1440" alt="Screen Shot 2022-01-27 at 1 41 52 PM" src="https://user-images.githubusercontent.com/47227896/151432193-6a86d571-0817-404f-9c95-32d10a5393ee.png">
 
 Spanish Letter Output
-<img width="1440" alt="Screen Shot 2022-01-25 at 5 15 25 PM" src="https://user-images.githubusercontent.com/47227896/151110239-cbde5d56-8989-4710-a0fa-dcda2acca301.png">
+<img width="1440" alt="Screen Shot 2022-01-27 at 1 41 24 PM" src="https://user-images.githubusercontent.com/47227896/151432111-29085f7e-b244-48f9-bc6d-7e3b727193b6.png">
