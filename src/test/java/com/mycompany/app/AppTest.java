@@ -18,11 +18,44 @@ public class AppTest
 		String wordsCSV = "Bob,Mary,Sue,Jim";
 		assertEquals(words, App.splitByComma(wordsCSV));
 	}
-	
-	public void testSplitInEs()
+
+	@Test
+	public void testReadInLettersEng() 
 	{
-		String textImport = App.readInLetters("SpanishLetters.txt");
-		String[] esWords = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o","p","q","r","s","t","u","v","w","x","y","z"};
-		assertEquals(esWords, App.splitByComma(textImport));
+		String contents = App.readInLetters("EnglishLetters.txt");
+		String expected = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
+		assertEquals(contents, expected);
+	}
+	
+	@Test
+	public void testReadInLettersEsp()
+	{
+		String contents = App.readInLetters("SpanishLetters.txt");
+		String expected = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,ñ,o,p,q,r,s,t,u,v,w,x,y,z";
+		assertEquals(contents, expected);
+	}
+	
+	@Test
+	public void testReadAndSplitEng() 
+	{
+		String contents = App.readInLetters("EnglishLetters.txt");
+		String[] lettersArr = App.splitByComma(contents);
+		String[] expected = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+		assertEquals(lettersArr, expected);
+	}
+	
+	@Test
+	public void testReadAndSplitEsp() 
+	{
+		String contents = App.readInLetters("SpanishLetters.txt");
+		String[] lettersArr = App.splitByComma(contents);
+		String[] expected = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+		assertEquals(lettersArr, expected);
+	}
+	
+	@Test
+	public void testReadAndFail()
+	{
+		Exception exception = assertThrows(NoSuchFileException.class, () -> App.readInLetters("IgboLetters.txt"));
 	}
 }
