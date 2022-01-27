@@ -18,7 +18,6 @@ public class AppTest
 		String wordsCSV = "Bob,Mary,Sue,Jim";
 		assertEquals(words, App.splitByComma(wordsCSV));
 	}
-}
 
 	@Test
 	public void testReadInLettersEng() 
