@@ -52,11 +52,6 @@ public class AppTest
 		String[] expected = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
 		assertEquals(lettersArr, expected);
 	}
-	
-	@Test
-	public void testReadAndFail()
-	{
-		Exception exception = assertThrows(NoSuchFileException.class, () -> App.readInLetters("IgboLetters.txt"));
-	}
+
 }
 
